@@ -1,6 +1,7 @@
 package kim.spe.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author charlie
@@ -11,6 +12,15 @@ public class User implements Serializable {
 
     private String uname;
     private Integer age;
+    private Date date;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public String getUname() {
         return uname;
@@ -28,11 +38,20 @@ public class User implements Serializable {
         this.age = age;
     }
 
+//    @Override
+//    public String toString() {
+//        return "User{" +
+//                "uname='" + uname + '\'' +
+//                ", age=" + age +
+//                '}';
+//    }
+
     @Override
     public String toString() {
         return "User{" +
                 "uname='" + uname + '\'' +
                 ", age=" + age +
+                ", date=" + date +
                 '}';
     }
 }

@@ -16,6 +16,7 @@
     <a href="helloworld">world</a>
 --%>
     <a href="testRequestMapping">comment</a>
+    <a href="param/testServlet">openapi</a>
 <%--
     request for params
 
@@ -35,6 +36,7 @@
     </form>
 
 --%>
+<%--
     <form action="param/saveAccount" method="post">
         name:<input type="text" name="username"/><br/>
         pswd:<input type="password" name="password"/><br/>
@@ -43,11 +45,20 @@
         unam:<input type="text" name="list[0].uname"/><br/>
         uage:<input type="text" name="list[0].age"/><br/>
 
-        unam:<input type="text" name="map['first'].uname"/><br/>
-        uage:<input type="text" name="map['first'].age"/><br/>
+        unam:<input type="text" name="map['one'].uname"/><br/>
+        uage:<input type="text" name="map['one'].age"/><br/>
+
         <input type="submit" value="submit"/>
     </form>
+--%>
+    <form action="param/saveUser" method="post">
+        name:<input type="text" name="username"/><br/>
+        pswd:<input type="password" name="password"/><br/>
+        date:<input type="text" name="date"/><br/>
 
+
+        <input type="submit" value="submit"/>
+    </form>
 
 
 </body>

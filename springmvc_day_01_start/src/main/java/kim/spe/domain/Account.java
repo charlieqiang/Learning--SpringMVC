@@ -13,8 +13,9 @@ public class Account implements Serializable {
     private String username;
     private String password;
     private Double money;
+
     private List<User> list;
-    private Map<String, User> map;
+    private Map<String,User> map;
 
     public List<User> getList() {
         return list;
@@ -31,9 +32,6 @@ public class Account implements Serializable {
     public void setMap(Map<String, User> map) {
         this.map = map;
     }
-
-
-
 //    private User user;
 //
 //    public User getUser() {

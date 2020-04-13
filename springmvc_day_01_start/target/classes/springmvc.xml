@@ -19,8 +19,18 @@
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
+<!--
+    date class convert
+-->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="kim.spe.utils.StringToDateConverter"></bean>
+            </set>
+        </property>
+    </bean>
     <!--  Enable component scan support  -->
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven conversion-service="conversionService"/>
+
 
 </beans>
